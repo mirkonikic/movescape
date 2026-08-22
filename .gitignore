@@ -67,3 +67,15 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# CMake build trees
+/build/
+/build-*/
+
+# Aptos writes package artifacts beside Move.toml.
+/examples/**/build/
+/examples/**/.aptos/
+
+# Movscape round-trip commands should write disposable results outside the
+# checked example tree.
+/examples/round_trip_demo/movscape_round_trip*/
